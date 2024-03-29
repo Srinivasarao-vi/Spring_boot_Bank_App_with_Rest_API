@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.spring.world.app.DTO.AccountDTO;
-import com.spring.world.app.entity.Account;
 import com.spring.world.app.service.AccountService;
 
 @RestController
@@ -66,7 +65,7 @@ public class AccountController {
 	@DeleteMapping("/{id}/delete")
 	public ResponseEntity<String> deleteAccount(@PathVariable long id) {
 		accountService.deleteAccount(id);
-		return ResponseEntity.ok("Account is Deteleted"+id);
+		return ResponseEntity.ok("Account is Deteleted ::"+id);
 	}
 	
 
